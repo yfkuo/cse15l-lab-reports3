@@ -1,7 +1,6 @@
 # Lab Report 3 - Bugs and Commands (Week 5)
 ## Part 1 - Bugs
-- Chosen bug from week 4’s lab:
-[image]!()
+
 - A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
 
 ```
@@ -35,9 +34,9 @@ public class ArrayTests {
 
 - The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
 error message:
-[image]!(error_symtom.png)
+![Image](error_symtom.png)
 sucess message:
-[image]!(good_symtom.png)
+![Image](good_symtom.png)
 
 - The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
 
@@ -70,18 +69,21 @@ public class ArrayExamples {
 }
 ```
 - Briefly describe why the fix addresses the issue:
-I fixed the code from `arr[i] = newArray[arr.length - i - 1];` to `newArray[i] = arr[arr.length - i - 1];`
-because the goal of this function is to returns a *new* array with all the elements of the input array in reversed order.
+I fixed the code from `arr[i] = newArray[arr.length - i - 1];` to `newArray[i] = arr[arr.length - i - 1];`.
+because the goal for this function is to returns a *new* array with all the elements of the input array in reversed order.
+The newArray is a new empty array, so we should be appending integers reversely from arr to newArray not the opposite way.
 
 
 ## Part 2 - Researching Commands
 
-`find ./technical`
+- Chosen command is `find`.
+- The four command-line options are `-type`, `-name`, `-print`, and `-iname`.
 
-`find ./technical -type f`
+- `find ./technical -type f`
+  
 ```
-# This finds all the paths to each files from ./technical.
-# This is useful when we try to find paths to files.
+# This finds all the paths to each files within ./technical directory.
+# This can be useful when we try to find all the paths to each files.
 ./technical/plos/journal.pbio.0020042.txt
 ./technical/plos/journal.pbio.0020297.txt
 ./technical/plos/pmed.0020206.txt
@@ -1105,10 +1107,11 @@ because the goal of this function is to returns a *new* array with all the eleme
 ```
 
 
-`find ./technical -type d`
+- `find ./technical -type d`
+
 ```
-# This finds all the paths to each directories from ./technical.
-# This is useful when we try to find what are the paths to each directories from ./technical.
+# This finds all the paths to each subdirectories within ./technical directory.
+# This can be useful when we try to find all the paths to each subdirectories within ./technical directory.
 ./technical
 ./technical/government
 ./technical/government/About_LSC
@@ -1125,8 +1128,8 @@ because the goal of this function is to returns a *new* array with all the eleme
 
 `find ./technical -name "*txt"`
 ```
-# This finds the .txt files' names paths from ./technical.
-# This is useful when we try to find all paths to .txt files from ./technical.
+# This finds all the paths to the files named with ".txt" within ./technical directory.
+# This is useful when we try to find all paths to .txt files within ./technical.
 ./technical/plos/journal.pbio.0020042.txt
 ./technical/plos/journal.pbio.0020297.txt
 ./technical/plos/pmed.0020206.txt
@@ -2153,24 +2156,24 @@ because the goal of this function is to returns a *new* array with all the eleme
 
 `find ./technical -type d -name "biomed"`
 ```
-# This finds the directory named "biomed" from ./technical.
-# This is useful to verify if biomed directory is in technical directory.
+# This finds the path to the directory named "biomed" within ./technical directory.
+# This can be useful to check whether or not a directory(biomed) is a subdirectory of a directory(technical).
 ./technical/biomed
 ```
 
 
 `find ./technical -name "preface.txt" -print`
 ```
-# This prints the path of a file named "preface.txt" from ./technical
-# This is useful when we try to find the full path to "preface.txt" from ./technical without know its in /911report.
+# This prints the path of a file named "preface.txt" within ./technical directory.
+# This can be useful when we try to find the full path to a file(preface.txt) within a directory(./technical) without know its subdirectories in between.
 ./technical/911report/preface.txt
 ```
 
 
 `find ./technical -type d -print `
 ```
-# This prints subdirectories of ./technical
-# This is useful when we only want to find the subdirectories of ./technical directories.
+# This prints all subdirectories paths of ./technical directory.
+# This can be useful when we only want to find the subdirectories within a directory (./technical).
 ./technical
 ./technical/government
 ./technical/government/About_LSC
@@ -2187,8 +2190,8 @@ because the goal of this function is to returns a *new* array with all the eleme
 
 `find ./technical -iname "chapter*.txt`
 ```
-# This finds all files' paths contain "chapter" in their file names within ./technicalc directory.
-# This is useful when we try to find files ends with specific name within ./technicalc directory.
+# This finds all paths to all the files contain "chapter" in their names within ./technicalc directory.
+# This is useful when we try to find the paths to all files contain with a specific word(chapter) within a directory(./technical).
 ./technical/911report/chapter-13.4.txt
 ./technical/911report/chapter-13.5.txt
 ./technical/911report/chapter-13.1.txt
@@ -2210,8 +2213,8 @@ because the goal of this function is to returns a *new* array with all the eleme
 
 `find ./technical -type d -iname "*o*" `
 ```
-# This finds all directories contain charactor "o" in their names within ./technical directory.
-# This can be useful when we try to find directories when we dont exactly remember which one we are looking for.
+# This finds all paths to the directories contain a charactor "o" in their names within ./technical directory.
+# This can be useful when we try to find directories' paths when we do not exactly remember their names.
 ./technical/government
 ./technical/government/About_LSC
 ./technical/government/Env_Prot_Agen
@@ -2224,17 +2227,8 @@ because the goal of this function is to returns a *new* array with all the eleme
 ```
 
 
+## Citation URLs:
+- https://ss64.com/bash/find.html
+- https://www.computerhope.com/unix/ufind.htm
+- https://man7.org/linux/man-pages/man1/find.1.html
 
-
-
-
-
-
-
-``
-`find ./technical `
-```
-# 
-#
-
-```
