@@ -21,6 +21,9 @@ public class ArrayTests {
 
 ```
 # This code's output doesn’t induce a failure message.
+import static org.junit.Assert.*;
+import org.junit.*;
+
 public class ArrayTests {
   @Test
   public void testReversed() {
@@ -68,9 +71,11 @@ public class ArrayExamples {
 ```
 - Briefly describe why the fix addresses the issue:
   - I fixed the code from `arr[i] = newArray[arr.length - i - 1];` to `newArray[i] = arr[arr.length - i - 1];`.
+Initially the code was `arr[i] = newArray[arr.length - i - 1];`,
+which means the code was appending `newArray[arr.length - i - 1];`(empty array) to `arr[i]`,
+that was why we received an error message indicating that we got `<0>` instead of `<5>`.
 The goal for this function is to returns a new array with all the elements of the input array in reversed order,
-so the integers should be appending reversely from input array(arr) to the new array(newArray), not the opposite way.
-
+so the elements should be appending reversely from input array(arr) to the new array(newArray), which indicates `newArray[i] = arr[arr.length - i - 1];`.
 
 ## Part 2 - Researching Commands
 - Chosen command is `find`.
