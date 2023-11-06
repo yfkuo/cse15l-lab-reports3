@@ -4,7 +4,7 @@
 - A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
 
 ```
-# expected:<5> but was:<0>
+# This code shows a failure-inducing output says: expected:<5> but was:<0>.
 import static org.junit.Assert.*;
 import org.junit.*;
 
@@ -15,13 +15,12 @@ public class ArrayTests {
     assertArrayEquals(new int[]{ 5,4,3,2 }, ArrayExamples.reversed(input2));
   }
 }
-
 ```
 
 - An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)
 
 ```
-# code block
+# This code's output doesn’t induce a failure message.
 public class ArrayTests {
   @Test
   public void testReversed() {
@@ -29,7 +28,6 @@ public class ArrayTests {
     assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input2));
   }
 }
-
 ```
 
 - The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
@@ -68,8 +66,8 @@ public class ArrayExamples {
   }
 }
 ```
-- Briefly describe why the fix addresses the issue:
-I fixed the code from `arr[i] = newArray[arr.length - i - 1];` to `newArray[i] = arr[arr.length - i - 1];`.
+- Briefly describe why the fix addresses the issue:\n
+    I fixed the code from `arr[i] = newArray[arr.length - i - 1];` to `newArray[i] = arr[arr.length - i - 1];`.
 because the goal for this function is to returns a *new* array with all the elements of the input array in reversed order.
 The newArray is a new empty array, so we should be appending integers reversely from arr to newArray not the opposite way.
 
