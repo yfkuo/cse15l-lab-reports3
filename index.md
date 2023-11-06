@@ -81,8 +81,7 @@ so the elements should be appending reversely from input array(arr) to the new a
 - Chosen command is `find`.
 - The four command-line options are `-type`, `-name`, `-print`, and `-iname`.
 
-- `find ./technical -type f`
-  
+- `find ./technical -type f`  
 ```
 # This finds all the paths to each files within ./technical directory.
 # This can be useful when we try to find all the paths to each files.
@@ -1110,7 +1109,6 @@ so the elements should be appending reversely from input array(arr) to the new a
 
 
 - `find ./technical -type d`
-
 ```
 # This finds all the paths to all the types that are directories within ./technical directory.
 # This can be useful when we try to find the all the paths with only directory types within ./technical directory.
@@ -1128,7 +1126,7 @@ so the elements should be appending reversely from input array(arr) to the new a
 ```
 
 
-- `find ./technical -name "*txt"`
+- `find ./technical -name "*txt"`  
 ```
 # This finds all the paths to the files' names with ".txt" within ./technical directory.
 # This is useful when we try to find all paths to all files contain "txt" in their name within ./technical directory.
@@ -2152,7 +2150,6 @@ so the elements should be appending reversely from input array(arr) to the new a
 ./technical/911report/chapter-12.txt
 ./technical/911report/chapter-10.txt
 ./technical/911report/chapter-11.txt
-
 ```
 
 
