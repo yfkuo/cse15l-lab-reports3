@@ -66,14 +66,13 @@ public class ArrayExamples {
   }
 }
 ```
-- Briefly describe why the fix addresses the issue:\n
-    I fixed the code from `arr[i] = newArray[arr.length - i - 1];` to `newArray[i] = arr[arr.length - i - 1];`.
-because the goal for this function is to returns a *new* array with all the elements of the input array in reversed order.
-The newArray is a new empty array, so we should be appending integers reversely from arr to newArray not the opposite way.
+- Briefly describe why the fix addresses the issue:
+  - I fixed the code from `arr[i] = newArray[arr.length - i - 1];` to `newArray[i] = arr[arr.length - i - 1];`.
+The goal for this function is to returns a new array with all the elements of the input array in reversed order,
+so the integers should be appending reversely from input array(arr) to the new array(newArray), not the opposite way.
 
 
 ## Part 2 - Researching Commands
-
 - Chosen command is `find`.
 - The four command-line options are `-type`, `-name`, `-print`, and `-iname`.
 
@@ -1108,8 +1107,8 @@ The newArray is a new empty array, so we should be appending integers reversely 
 - `find ./technical -type d`
 
 ```
-# This finds all the paths to each subdirectories within ./technical directory.
-# This can be useful when we try to find all the paths to each subdirectories within ./technical directory.
+# This finds all the paths to all the types that are directories within ./technical directory.
+# This can be useful when we try to find the all the paths with only directory types within ./technical directory.
 ./technical
 ./technical/government
 ./technical/government/About_LSC
@@ -1126,8 +1125,8 @@ The newArray is a new empty array, so we should be appending integers reversely 
 
 `find ./technical -name "*txt"`
 ```
-# This finds all the paths to the files named with ".txt" within ./technical directory.
-# This is useful when we try to find all paths to .txt files within ./technical.
+# This finds all the paths to the files' names with ".txt" within ./technical directory.
+# This is useful when we try to find all paths to all files contain "txt" in their name within ./technical directory.
 ./technical/plos/journal.pbio.0020042.txt
 ./technical/plos/journal.pbio.0020297.txt
 ./technical/plos/pmed.0020206.txt
@@ -2168,10 +2167,10 @@ The newArray is a new empty array, so we should be appending integers reversely 
 ```
 
 
-`find ./technical -type d -print `
+`find ./technical -type d -print`
 ```
 # This prints all subdirectories paths of ./technical directory.
-# This can be useful when we only want to find the subdirectories within a directory (./technical).
+# This can be useful when we only want to print the subdirectories within a directory (./technical).
 ./technical
 ./technical/government
 ./technical/government/About_LSC
@@ -2209,19 +2208,14 @@ The newArray is a new empty array, so we should be appending integers reversely 
 ```
 
 
-`find ./technical -type d -iname "*o*" `
+`find ./technical -type d -iname "*i*" `
 ```
-# This finds all paths to the directories contain a charactor "o" in their names within ./technical directory.
+# This finds all paths to the directories contain a charactor "i" in their names within ./technical directory.
 # This can be useful when we try to find directories' paths when we do not exactly remember their names.
-./technical/government
-./technical/government/About_LSC
-./technical/government/Env_Prot_Agen
-./technical/government/Alcohol_Problems
+./technical
 ./technical/government/Gen_Account_Office
-./technical/government/Post_Rate_Comm
-./technical/plos
+./technical/government/Media
 ./technical/biomed
-./technical/911report
 ```
 
 
