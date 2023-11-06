@@ -1128,7 +1128,7 @@ so the elements should be appending reversely from input array(arr) to the new a
 ```
 
 
-`find ./technical -name "*txt"`
+- `find ./technical -name "*txt"`
 ```
 # This finds all the paths to the files' names with ".txt" within ./technical directory.
 # This is useful when we try to find all paths to all files contain "txt" in their name within ./technical directory.
@@ -2156,7 +2156,7 @@ so the elements should be appending reversely from input array(arr) to the new a
 ```
 
 
-`find ./technical -type d -name "biomed"`
+- `find ./technical -type d -name "biomed"`
 ```
 # This finds the path to the directory named "biomed" within ./technical directory.
 # This can be useful to check whether or not a directory(biomed) is a subdirectory of a directory(technical).
@@ -2164,7 +2164,7 @@ so the elements should be appending reversely from input array(arr) to the new a
 ```
 
 
-`find ./technical -name "preface.txt" -print`
+- `find ./technical -name "preface.txt" -print`
 ```
 # This prints the path of a file named "preface.txt" within ./technical directory.
 # This can be useful when we try to find the full path to a file(preface.txt) within a directory(./technical) without know its subdirectories in between.
@@ -2172,7 +2172,7 @@ so the elements should be appending reversely from input array(arr) to the new a
 ```
 
 
-`find ./technical -type d -print`
+- `find ./technical -type d -print`
 ```
 # This prints all subdirectories paths of ./technical directory.
 # This can be useful when we only want to print the subdirectories within a directory (./technical).
@@ -2190,7 +2190,7 @@ so the elements should be appending reversely from input array(arr) to the new a
 ```
 
 
-`find ./technical -iname "chapter*.txt`
+- `find ./technical -iname "chapter*.txt`
 ```
 # This finds all paths to all the files contain "chapter" in their names within ./technicalc directory.
 # This is useful when we try to find the paths to all files contain with a specific word(chapter) within a directory(./technical).
@@ -2213,7 +2213,7 @@ so the elements should be appending reversely from input array(arr) to the new a
 ```
 
 
-`find ./technical -type d -iname "*i*" `
+- `find ./technical -type d -iname "*i*" `
 ```
 # This finds all paths to the directories contain a charactor "i" in their names within ./technical directory.
 # This can be useful when we try to find directories' paths when we do not exactly remember their names.
